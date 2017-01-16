@@ -26,15 +26,15 @@ RSpec.describe 'Version' do
   describe 'comparing Versions' do
     context 'when a version is constructed from another Version object' do
       it 'is equal to the one it is constructed from' do
-        eq_version_1 = Vesion.new("5.4.7")
-        eq_version_2 = Vesion.new(eq_version_1)
+        eq_version_1 = Version.new("5.4.7")
+        eq_version_2 = Version.new(eq_version_1)
         expect(eq_version_1).to eq(eq_version_2)
       end
     end
     context 'when a version is logically equal to another' do
       it 'is equal to the other version' do
-        eq_version_1 = Vesion.new("5.4.0")
-        eq_version_2 = Vesion.new("5.4")
+        eq_version_1 = Version.new("5.4.0")
+        eq_version_2 = Version.new("5.4")
         expect(eq_version_1).to eq(eq_version_2)
       end
     end
